@@ -4,7 +4,7 @@ const path = require('path');
 const app = express();
 const cors = require('cors');
 
-const Port = process.env.PORT | 80
+const Port = process.env.PORT || 30124
 const corsOpts = {
     origin: '*',
   
@@ -23,11 +23,11 @@ app.listen(Port,()=>{
     console.log(`Server is Running on Port ${Port}`)
 })
 
-app.set('views', './View');
+app.set('views', './Views/');
 app.set("view engine","ejs")
 
 require("./config/db")()
-
+app.use("/",express.static("./FrontEnd/public/"))
 app.use('/api/file',require("./Router/File"));
 app.use('/download',require("./Router/Download"));
 app.use('/myfile',require("./Router/download_page"));

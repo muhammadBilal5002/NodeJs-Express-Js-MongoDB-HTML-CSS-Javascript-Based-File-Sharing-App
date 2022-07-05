@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>My File Sharing App</title>
+</head>
+<body>
+    <section class="upload-container">
+        <!-- dropped -->
+        <div class="drop-file" id="drop-file">
+        <div class="icon">
+            <img src="file.svg" id="left" alt="FileLogo" srcset="" draggable="false">
+            <img src="file.svg" id="center" alt="FileLogo" srcset="" draggable="false">
+            <img src="file.svg" id="right" alt="FileLogo" srcset="" draggable="false">
+        </div>
+        <input type="file" name="" id="fileinp" multiple>
+        <div><span>Drop Your File Here Or, </span><span id="browse"> Browse</span></div>
+    </div>
+
+    <div class="Upload-Progress">
+        <div class="progress-bar"></div>
+        <div id="percentvalue">
+            <p>Uploading......</p>
+            <p id="percent">0%</p>
+        </div>
+    </div>
+
+    <div class="link">
+        <p>Link Will Be Expired In 24Hours</p>
+        <input type="text" id="link" readonly onclick="copyvalue()">
+        <img src="copy-svgrepo-com.svg" alt="copy-icon" id="copy" onclick="copyvalue()">
+    </div>
+</section>
+</body>
+<script src="index.js"></script>
+</html>
