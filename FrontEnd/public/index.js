@@ -22,6 +22,7 @@ drop.addEventListener("drop",(e)=>{
     e.preventDefault()
     drop.classList.remove("dropped")
     fileinp.files = e.dataTransfer.files
+    e.dataTransfer.files = null
     console.log(fileinp.files)
     uploadFile()
 })
